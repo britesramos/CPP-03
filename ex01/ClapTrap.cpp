@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ClapTrap.cpp                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: sramos <sramos@student.codam.nl>             +#+                     */
+/*   By: marvin <marvin@student.42.fr>                +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/03/03 10:51:54 by sramos        #+#    #+#                 */
-/*   Updated: 2025/03/03 18:01:10 by sramos        ########   odam.nl         */
+/*   Updated: 2025/03/03 21:49:28 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,4 +90,20 @@ unsigned int ClapTrap::get_energy_points(){
 
 unsigned int ClapTrap::get_attack_damage(){
 	return (this->_attack_damage);
+}
+
+void	ClapTrap::set_name(std::string n_name){
+	this->_name = n_name;
+}
+
+void	ClapTrap::set_hit_points(unsigned int n_hit_points){
+	this->_hit_points = n_hit_points;
+}
+
+void	ClapTrap::set_energy_points(unsigned int n_energy_points){
+	this->_energy_points = n_energy_points;
+}
+
+void	ClapTrap::set_attack_damage(unsigned int n_attack_damage){
+	this->_attack_damage = n_attack_damage;
 }
