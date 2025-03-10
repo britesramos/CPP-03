@@ -6,12 +6,14 @@
 /*   By: marvin <marvin@student.42.fr>                +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/03/03 10:51:34 by sramos        #+#    #+#                 */
-/*   Updated: 2025/03/03 21:47:34 by anonymous     ########   odam.nl         */
+/*   Updated: 2025/03/10 10:48:39 by sramos        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "iomanip"
 #include "iostream"
+
+#pragma once
 
 class ClapTrap
 {

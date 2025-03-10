@@ -6,11 +6,11 @@
 #    By: sramos <sramos@student.codam.nl>             +#+                      #
 #                                                    +#+                       #
 #    Created: 2025/02/21 14:37:52 by sramos        #+#    #+#                  #
-#    Updated: 2025/03/03 18:13:04 by sramos        ########   odam.nl          #
+#    Updated: 2025/03/10 10:54:03 by sramos        ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = claptrap
+NAME = scavtrap
 
 CPPFLAGS = -Wall -Werror -Wextra -std=c++11
 
