@@ -6,12 +6,12 @@
 /*   By: sramos <sramos@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/03/03 10:51:24 by sramos        #+#    #+#                 */
-/*   Updated: 2025/03/10 17:53:34 by sramos        ########   odam.nl         */
+/*   Updated: 2025/03/10 18:13:44 by sramos        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main(){
 	{
@@ -43,33 +43,31 @@ int main(){
 	}
 	std::cout << "\n_______________________________________________________\n" << std::endl;
 	{
-		ScavTrap B ("Scav Trap B");
-
-		std::cout << B.get_name() << " energy points: " << B.get_energy_points() << std::endl;
-		std::cout << B.get_name() << " hit points: " << B.get_hit_points() << std::endl;
-		std::cout << B.get_name() << " attack damage: " << B.get_attack_damage() << std::endl;
-
-		std::cout << "-----------------------------------------------------" << std::endl;
-		B.beRepaired(10);
-		std::cout << "-----------------------------------------------------" << std::endl;
-
-		std::cout << B.get_name() << " energy points: " << B.get_energy_points() << std::endl;
-		std::cout << B.get_name() << " hit points: " << B.get_hit_points() << std::endl;
-		std::cout << B.get_name() << " attack damage: " << B.get_attack_damage() << std::endl;
+		FragTrap A("Frag Trap A");
+		std::cout << A.get_name() << " energy points: " << A.get_energy_points() << std::endl;
+		std::cout << A.get_name() << " hit points: " << A.get_hit_points() << std::endl;
+		std::cout << A.get_name() << " attack damage: " << A.get_attack_damage() << std::endl;
 
 		std::cout << "-----------------------------------------------------" << std::endl;
-		B.attack("Trap B");
-		std::cout << "-----------------------------------------------------" << std::endl;
-		B.guardGate();
-		std::cout << "-----------------------------------------------------" << std::endl;
-		B.takeDamage(110);
+		A.beRepaired(10);
 		std::cout << "-----------------------------------------------------" << std::endl;
 
-		std::cout << B.get_name() << " energy points: " << B.get_energy_points() << std::endl;
-		std::cout << B.get_name() << " hit points: " << B.get_hit_points() << std::endl;
-		std::cout << B.get_name() << " attack damage: " << B.get_attack_damage() << std::endl;
+		std::cout << A.get_name() << " energy points: " << A.get_energy_points() << std::endl;
+		std::cout << A.get_name() << " hit points: " << A.get_hit_points() << std::endl;
+		std::cout << A.get_name() << " attack damage: " << A.get_attack_damage() << std::endl;
 
 		std::cout << "-----------------------------------------------------" << std::endl;
-		B.attack("Trap C");
+		A.attack("Trap B");
+		std::cout << "-----------------------------------------------------" << std::endl;
+		A.takeDamage(110);
+		A.highFiveGuys();
+		std::cout << "-----------------------------------------------------" << std::endl;
+
+		std::cout << A.get_name() << " energy points: " << A.get_energy_points() << std::endl;
+		std::cout << A.get_name() << " hit points: " << A.get_hit_points() << std::endl;
+		std::cout << A.get_name() << " attack damage: " << A.get_attack_damage() << std::endl;
+
+		std::cout << "-----------------------------------------------------" << std::endl;
+		A.attack("Trap C");
 	}
 }
