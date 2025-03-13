@@ -6,7 +6,7 @@
 /*   By: sramos <sramos@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/03/03 10:51:24 by sramos        #+#    #+#                 */
-/*   Updated: 2025/03/10 18:55:19 by sramos        ########   odam.nl         */
+/*   Updated: 2025/03/13 18:21:28 by sramos        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,11 +72,4 @@ int main(){
 		std::cout << "-----------------------------------------------------" << std::endl;
 		B.attack("Trap C");
 	}
-	
-
-	std::cout << "\n_______________________________________________________\n" << std::endl;
-	ClapTrap* p = new ScavTrap("Tom");
-
-	p->attack("Sabrina");
-	delete p;
 }

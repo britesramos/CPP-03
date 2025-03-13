@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>                +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/03/03 18:13:06 by sramos        #+#    #+#                 */
-/*   Updated: 2025/03/10 18:52:31 by sramos        ########   odam.nl         */
+/*   Updated: 2025/03/13 18:27:12 by sramos        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,16 @@
 
 ScavTrap::ScavTrap(): ClapTrap(){
 	std::cout << "ScavTrap default constructor called" << std::endl;
+	this->_hit_points = 100;
+	this->_energy_points = 50;
+	this->_attack_damage = 20;
 }
 
 ScavTrap::ScavTrap(std::string name): ClapTrap(name){
 	std::cout << "ScavTrap constructor called." << std::endl;
-	set_hit_points(100);
-	set_energy_points(50);
-	set_attack_damage(20);
+	this->_hit_points = 100;
+	this->_energy_points = 50;
+	this->_attack_damage = 20;
 }
 
 ScavTrap::ScavTrap(const ScavTrap& scavtrap): ClapTrap(scavtrap){
@@ -31,8 +34,9 @@ ScavTrap::ScavTrap(const ScavTrap& scavtrap): ClapTrap(scavtrap){
 ScavTrap& ScavTrap::operator=(const ScavTrap& scavtrap){
 	std::cout << "ScavTrap copy assignment operator called." << std::endl;
 	if (this != &scavtrap){
-		//not sure how this works as it inherited it from ClapTrap.
+		ClapTrap::operator=(scavtrap);
 	}
+	//If what we are trying to copy is already the same memory address just return the same value.
 	return (*this);
 }
 
@@ -45,9 +49,8 @@ void ScavTrap::attack(const std::string& target){
 		std::cout << "No energy left to attack: " << target << std::endl;
 		return ;
 	}
-	set_energy_points(get_energy_points() - 1);
-	std::cout << "ScavTrap " << get_name() << " attacks " << target << ", causing " << get_attack_damage() << " points of damage!" << std::endl;
-	
+	this->_energy_points--;
+	std::cout << "ScavTrap " << this->_name << " attacks " << target << ", causing " << this->_attack_damage << " points of damage!" << std::endl;
 }
 
 void ScavTrap::guardGate(){
