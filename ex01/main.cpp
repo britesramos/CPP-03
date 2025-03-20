@@ -6,7 +6,7 @@
 /*   By: sramos <sramos@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/03/03 10:51:24 by sramos        #+#    #+#                 */
-/*   Updated: 2025/03/13 18:21:28 by sramos        ########   odam.nl         */
+/*   Updated: 2025/03/20 11:56:43 by sramos        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int main(){
 		std::cout << "-----------------------------------------------------" << std::endl;
 		B.guardGate();
 		std::cout << "-----------------------------------------------------" << std::endl;
-		B.takeDamage(110);
+		B.takeDamage(111);
 		std::cout << "-----------------------------------------------------" << std::endl;
 
 		std::cout << B.get_name() << " energy points: " << B.get_energy_points() << std::endl;
